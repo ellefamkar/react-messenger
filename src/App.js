@@ -1,9 +1,14 @@
+import { Switch, Route } from "react-router-dom/cjs/react-router-dom";
+import Login from "./components/Login";
 
 function App() {
   return (
-    <divgit sta>
-     
-    </div>
+    <>
+      <Switch>
+        <Route path="/login" component={Login} />  
+        <Route path="/" component={Login} />  
+      </Switch>     
+    </>
   );
 }
 
