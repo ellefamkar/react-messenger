@@ -3,13 +3,13 @@ import React from 'react';
 // Styles
 import styles from "./Navbar.module.css";
 
-const Navbar = () => {
+const Navbar = ({logOutHandler}) => {
     return (
         <div className={styles.container}>
             <div className={styles.name}>
                 SoloMates
             </div>
-            <div className={styles.logout}>
+            <div className={styles.logout} onClick={logOutHandler}>
                 Logout
             </div>
         </div>
