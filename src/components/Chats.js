@@ -44,6 +44,15 @@ const Chats = () => {
             getFile(user.photoURL)
             .then(avatar => {
                 formdata.append("avatar", avatar, avatar.name)
+                axios.post("https://api.chatengine.io/users", formdata, {
+                    headers : {
+                        "private-key" : "798ba96c-d70b-49c6-ab4d-649ea8ed7ab7"
+                    }
+                })
+                .then(()=>{
+                    setLoading(false)
+                })
+                .catch(error => console.log(error))
             })
 
         });
@@ -75,8 +84,8 @@ const Chats = () => {
             <ChatEngine
                 height="calc(100vh - 50px)"
                 projectId="c586e3d8-43ae-431d-86a0-baeb6a49fd73"
-                userName="."
-                userSecret="."
+                userName= {user.email}
+                userSecret= {user.uid}
             />
         </div>
     );
