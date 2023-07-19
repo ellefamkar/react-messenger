@@ -8,13 +8,13 @@
 }
 
 .name {
-  color: #0f9d58;
+  color: #424242;
   font-size: 1.1rem;
   font-weight: bold;
 }
 
 .logout {
-  background: #0f9d58;
+  background: #000000;
   padding: 5px 10px;
   color: #fff;
   border-radius: 5px;
@@ -23,5 +23,5 @@
 }
 
 .logout:hover {
-  background: #07713e;
+  background: #0b0b0b;
 }

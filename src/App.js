@@ -1,4 +1,6 @@
 import { Switch, Route } from "react-router-dom/cjs/react-router-dom";
+
+// components 
 import Login from "./components/Login";
 import Chats from "./components/Chats";
 
@@ -10,9 +12,8 @@ function App() {
     <>
     <AuthContextProvider>
       <Switch>
-          <Route path="/chats" component={Chats} />  
           <Route path="/login" component={Login} />  
-          <Route path="/" component={Login} />  
+          <Route path="/chats" component={Chats} />  
         </Switch>
     </AuthContextProvider>     
     </>

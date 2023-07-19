@@ -1,12 +1,18 @@
 import React from 'react';
+// import React , {useState, useEffect, useContext} from 'react';
 
 // Components
 import Navbar from './Navbar';
 import { auth } from '../firebase';
 import { useHistory } from 'react-router-dom/cjs/react-router-dom';
 import { ChatEngine } from 'react-chat-engine';
+// import axios from 'axios';
+
 // Styles
 import styles from "./Chats.module.css"
+
+// context
+// import { AuthContext } from '../contexts/AuthContextProvider'; 
 
 const Chats = () => {
 
@@ -14,7 +20,7 @@ const Chats = () => {
 
     const logOutHandler = async () =>{
         await auth.signOut();
-        histroy.push("/");
+        histroy.push("/login");
     }
 
     return (
